@@ -1,14 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 <html  xmlns:th="http://www.thymeleaf.org">
-<head th:replace="templates/fragments/commons::head"></head>
+<head th:replace="fragments/commons::head"></head>
+<body>
 <div class="col-lg-10">
-    <h2>Вход в системата</h2>
+    <h2>Login</h2>
     <form action="" class="form-group" style="position: center; padding-top:100px; margin-left: 400px">
-        <p>Потребителско име: </p><input type="text" class="form-control">
+        <p>Username: </p><input type="text" class="form-control">
         <br>
-        <p>Парола:</p><input type="password" class="form-control">
+        <p>Password:</p><input type="password" class="form-control">
         <br>
-        <button class="btn btn-primary">Вход</button>
+        <br>
+        <br>
+        <button class="btn btn-primary">Login</button>
     </form>
 </div>
 </body>
