@@ -1,0 +1,29 @@
+[
+    {
+        "model":"Airbus",
+         "yearOfProduction":"1970",
+         "description":"This a Airbus model",
+         "type": "Airbus"
+    },
+  {
+    "model":"Fight craft XYZ",
+    "yearOfProduction":"1932",
+    "description":"This a test fightcraft model",
+    "type": "FightCraft"
+  },
+  {
+    "model":"Airbus 2",
+    "yearOfProduction":"1945",
+    "description":"This a Airbus 2 model",
+    "type": "Airbus"
+
+  },
+  {
+    "model":"Helicopter",
+    "yearOfProduction":"",
+    "description":"This a Airbus model",
+    "type": "Airbus"
+
+  }
+
+]
