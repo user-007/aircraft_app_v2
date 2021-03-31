@@ -1,15 +1,16 @@
 package aicrafts.aircraft_app.model.entities;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.Min;
 
 @Entity
 @Table(name = "user")
 public class UserEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private String id;
+
     @Min(5)
     private String username;
     @Column(nullable = false)
