@@ -7,17 +7,12 @@ import javax.validation.constraints.Min;
 @Entity
 @Table(name = "user")
 public class UserEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
-
     @Min(5)
     private String username;
     @Column(nullable = false)
     private String password;
     @Email
     private String email;
-   // private Long id;
 
     public String getUsername() {
         return username;
@@ -41,14 +36,6 @@ public class UserEntity {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public UserEntity(@Min(5) String username, String password, @Email String email) {

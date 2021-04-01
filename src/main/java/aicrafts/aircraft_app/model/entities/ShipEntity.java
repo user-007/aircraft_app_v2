@@ -4,20 +4,37 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "ships")
-public class ShipEntity {
-    @Id
-    @GeneratedValue
-    private Long id;
+public class ShipEntity extends BaseEntity {
+@NotBlank
+private String name;
+private String weight;
+private String year;
 
-    public void setId(Long id) {
-        this.id = id;
+    public String getName() {
+        return name;
     }
 
-    @Id
-    public Long getId() {
-        return id;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getWeight() {
+        return weight;
+    }
+
+    public void setWeight(String weight) {
+        this.weight = weight;
+    }
+
+    public String getYear() {
+        return year;
+    }
+
+    public void setYear(String year) {
+        this.year = year;
     }
 }

@@ -5,14 +5,6 @@ import javax.persistence.*;
 @Entity
 @Table(name="weapons")
 public class WeaponEntity extends BaseEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_weapon",referencedColumnName = "id")
     private TruckEntity truck;
@@ -20,16 +12,6 @@ public class WeaponEntity extends BaseEntity {
     private String year;
     @Column(nullable = true,name = "produced")
     private String description;
-
-//    @Override
-//    public String getModel() {
-//        return model;
-//    }
-//
-//    @Override
-//    public void setModel(String model) {
-//        this.model = model;
-//    }
 
     public double getWeight() {
         return weight;
