@@ -27,6 +27,10 @@ public class WeaponViewModel {
     public void setWeaponEntities(List<WeaponViewModel> weaponEntities) {
         this.weaponEntities = weaponEntities;
     }
+    public WeaponViewModel addWeapon(WeaponViewModel weapon){
+        weaponEntities.add(weapon);
+        return this;
+    }
 
     @Override
     public String toString() {
