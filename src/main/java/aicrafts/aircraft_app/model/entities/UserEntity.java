@@ -8,7 +8,7 @@ import javax.validation.constraints.Min;
 @Table(name = "user")
 public class UserEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
 
     @Min(5)
@@ -41,6 +41,14 @@ public class UserEntity {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public UserEntity(@Min(5) String username, String password, @Email String email) {

@@ -6,6 +6,9 @@ import java.util.List;
 @Entity
 @Table(name = "trucks")
 public class TruckEntity extends BaseEntity{
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private String id;
     @Column(name = "url_path")
     private String pathToUrl;
     @Column(nullable = true)
