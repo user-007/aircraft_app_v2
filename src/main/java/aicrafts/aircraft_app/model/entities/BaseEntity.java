@@ -20,4 +20,5 @@ public class BaseEntity {
     public void setModel(String model) {
         this.model = model;
     }
+
 }

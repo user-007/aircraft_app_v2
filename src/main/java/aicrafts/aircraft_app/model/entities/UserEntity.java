@@ -6,13 +6,18 @@ import javax.validation.constraints.Min;
 
 @Entity
 @Table(name = "user")
-public class UserEntity {
+public class UserEntity extends BaseEntity {
+    //user model, Todo: to be removed later
     @Min(5)
     private String username;
     @Column(nullable = false)
     private String password;
     @Email
     private String email;
+
+    public UserEntity() {
+
+    }
 
     public String getUsername() {
         return username;
