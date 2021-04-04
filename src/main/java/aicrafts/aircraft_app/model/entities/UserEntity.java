@@ -3,6 +3,7 @@ package aicrafts.aircraft_app.model.entities;
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.Min;
+import java.util.List;
 
 @Entity
 @Table(name = "user")
@@ -14,9 +15,48 @@ public class UserEntity extends BaseEntity {
     private String password;
     @Email
     private String email;
-
     public UserEntity() {
 
+    }
+    @OneToMany
+    private List<TruckEntity> trucks;
+    @OneToMany
+    private List<AirplaneEntity> airplanes;
+    @OneToMany
+    private List<ShipEntity> ships;
+    @OneToMany
+    private List<WeaponEntity> weapons;
+
+    public List<TruckEntity> getTrucks() {
+        return trucks;
+    }
+
+    public void setTrucks(List<TruckEntity> trucks) {
+        this.trucks = trucks;
+    }
+
+    public List<AirplaneEntity> getAirplanes() {
+        return airplanes;
+    }
+
+    public void setAirplanes(List<AirplaneEntity> airplanes) {
+        this.airplanes = airplanes;
+    }
+
+    public List<ShipEntity> getShips() {
+        return ships;
+    }
+
+    public void setShips(List<ShipEntity> ships) {
+        this.ships = ships;
+    }
+
+    public List<WeaponEntity> getWeapons() {
+        return weapons;
+    }
+
+    public void setWeapons(List<WeaponEntity> weapons) {
+        this.weapons = weapons;
     }
 
     public String getUsername() {

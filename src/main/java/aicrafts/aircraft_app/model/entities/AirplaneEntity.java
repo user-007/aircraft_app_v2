@@ -12,6 +12,7 @@ private String yearOfProduction;
 private String description;
 @Enumerated(EnumType.STRING)
 private AirplaneEnum type;
+
     public AirplaneEntity(String modl, String yearOfProduction, String description,AirplaneEnum type) {
         model  = modl;
         this.yearOfProduction = yearOfProduction;

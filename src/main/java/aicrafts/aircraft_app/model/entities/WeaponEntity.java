@@ -5,9 +5,10 @@ import javax.persistence.*;
 @Entity
 @Table(name="weapons")
 public class WeaponEntity extends BaseEntity {
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_weapon",referencedColumnName = "id")
-    private TruckEntity truck;
+//    @ManyToOne(fetch = FetchType.EAGER)
+//    @JoinColumn(name = "id_weapon",referencedColumnName = "id")
+//    private TruckEntity truck;
+
     private double weight;
     private String year;
     @Column(nullable = true,name = "produced")
