@@ -9,4 +9,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface WeaponRepository extends JpaRepository<WeaponEntity,Long> {
     //public void findWeaponEntityByTruck(TruckEntity truckEntity);
+    @Query("select wep from WeaponEntity  wep")
+     public void getAllWeapons();
 }

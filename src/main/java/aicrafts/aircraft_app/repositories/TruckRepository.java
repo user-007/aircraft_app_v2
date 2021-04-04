@@ -4,10 +4,10 @@ import aicrafts.aircraft_app.model.entities.TruckEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
 import java.util.Optional;
 
 @Repository
 public interface TruckRepository extends JpaRepository<TruckEntity,Long> {
-Optional<TruckEntity> findTruckEntityByModel(String truckModel);
-
+List<TruckEntity> findTruckEntityByModel(String truckModel);
 }
