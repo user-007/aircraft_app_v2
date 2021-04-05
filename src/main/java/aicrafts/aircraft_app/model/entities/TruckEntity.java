@@ -6,8 +6,8 @@ import java.util.List;
 @Entity
 @Table(name = "trucks")
 public class TruckEntity extends BaseEntity{
-    @Column(name = "url_path")
-    private String pathToUrl;
+
+    private String image_url;
     @Column(nullable = true)
     private String description;
     @Override
@@ -20,12 +20,12 @@ public class TruckEntity extends BaseEntity{
         this.model = model;
     }
 
-    public String getPathToUrl() {
-        return pathToUrl;
+    public String getImage_url() {
+        return image_url;
     }
 
-    public void setPathToUrl(String pathToUrl) {
-        this.pathToUrl = pathToUrl;
+    public void setImage_url(String image_url) {
+        this.image_url = image_url;
     }
 
     public String getDescription() {
@@ -38,7 +38,7 @@ public class TruckEntity extends BaseEntity{
 
     public TruckEntity(String model, String pathToUrl, String description) {
         this.model = model;
-        this.pathToUrl = pathToUrl;
+        this.image_url = pathToUrl;
         this.description = description;
 
     }
@@ -50,9 +50,9 @@ public class TruckEntity extends BaseEntity{
     @Override
     public String toString() {
         return "TruckEntity{" +
-                "id='" +  + '\'' +
-                "model='" + model + '\'' +
-                ", pathToUrl='" + pathToUrl + '\'' +
+                "id=" + id +
+                ", model='" + model + '\'' +
+                ", image_url='" + image_url + '\'' +
                 ", description='" + description + '\'' +
                 '}';
     }

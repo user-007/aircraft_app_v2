@@ -5,9 +5,15 @@ import javax.persistence.*;
 @Entity
 @Table(name="weapons")
 public class WeaponEntity extends BaseEntity {
-//    @ManyToOne(fetch = FetchType.EAGER)
-//    @JoinColumn(name = "id_weapon",referencedColumnName = "id")
-//    private TruckEntity truck;
+    private String image_url;
+
+    public String getImage_url() {
+        return image_url;
+    }
+
+    public void setImage_url(String image_url) {
+        this.image_url = image_url;
+    }
 
     private double weight;
     private String year;

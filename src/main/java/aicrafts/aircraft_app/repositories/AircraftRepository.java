@@ -12,5 +12,5 @@ public interface AircraftRepository extends JpaRepository<AirplaneEntity,Long> {
 //Optional<AirplaneEntity> findAirplaneEntityByModel(String airplaneModel);
 @Query("select arpl from AirplaneEntity arpl")
 List<AirplaneEntity> findAll();
-List<AirplaneEntity> findAirplaneEntityByYearOfProduction();
+//List<AirplaneEntity> findAirplaneEntityByYearOfProduction();
 }

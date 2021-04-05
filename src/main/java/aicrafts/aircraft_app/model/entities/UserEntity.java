@@ -87,4 +87,16 @@ public class UserEntity extends BaseEntity {
         this.username = username;
         this.password = password;
     }
+
+    @Override
+    public String toString() {
+        return "UserEntity{" +
+                "username='" + username + '\'' +
+                ", email='" + email + '\'' +
+                ", trucks=" + trucks +
+                ", airplanes=" + airplanes +
+                ", ships=" + ships +
+                ", weapons=" + weapons +
+                '}';
+    }
 }

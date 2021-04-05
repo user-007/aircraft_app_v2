@@ -1,5 +1,7 @@
 package aicrafts.aircraft_app.model.entities;
 
+import com.sun.istack.Nullable;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.util.List;
@@ -22,7 +24,16 @@ private String year;
 //        this.airplanes = airplanes;
 //    }
 
+    @Column(nullable = false)
+    private String image_url;
 
+    public String getImage_url() {
+        return image_url;
+    }
+
+    public void setImage_url(String image_url) {
+        this.image_url = image_url;
+    }
 
     public String getName() {
         return name;
@@ -48,4 +59,13 @@ private String year;
         this.year = year;
     }
 
+    @Override
+    public String toString() {
+        return "ShipEntity{" +
+                "name='" + name + '\'' +
+                ", weight='" + weight + '\'' +
+                ", year='" + year + '\'' +
+                ", image_url='" + image_url + '\'' +
+                '}';
+    }
 }

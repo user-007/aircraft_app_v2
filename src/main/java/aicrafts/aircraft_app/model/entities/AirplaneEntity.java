@@ -20,6 +20,17 @@ private AirplaneEnum type;
         this.type = type;
     }
 
+    @Column(nullable = false)
+    private String image_url;
+
+    public String getImage_url() {
+        return image_url;
+    }
+
+    public void setImage_url(String image_url) {
+        this.image_url = image_url;
+    }
+
     public AirplaneEntity() {
 
     }
@@ -54,10 +65,10 @@ private AirplaneEnum type;
     @Override
     public String toString() {
         return "AirplaneEntity{" +
-                "id='" + id + '\'' +
-                "model='" + model + '\'' +
-                ", yearOfProduction='" + yearOfProduction + '\'' +
+                "yearOfProduction='" + yearOfProduction + '\'' +
                 ", description='" + description + '\'' +
+                ", type=" + type +
+                ", image_url='" + image_url + '\'' +
                 '}';
     }
 }
