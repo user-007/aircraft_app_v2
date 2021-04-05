@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface AirplaneService {
  List<AirplaneViewModel> getAllAirplanes();
-// void seedAirplanes();
+ void seedAirplanes();
 
 }

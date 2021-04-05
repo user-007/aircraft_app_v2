@@ -49,20 +49,20 @@ private final ModelMapper modelMapper;
       return airplaneEntities;
     }
 
-//    @Override
-//    public void seedAirplanes() {
-//        if(aircraftRepository.count()  == 0){
-//            try{
-//                AirplaneEntity[] airplaneEntities =
-//                      gson.fromJson(Files.readString(Path.of(airplanesFile.getURI())),AirplaneEntity[].class);
-//                Arrays.stream(airplaneEntities)
-//                        .forEach(aircraftRepository::save);
-//
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-//        }
-//    }
+    @Override
+    public void seedAirplanes() {
+        if(aircraftRepository.count()  == 0){
+            try{
+                AirplaneEntity[] airplaneEntities =
+                      gson.fromJson(Files.readString(Path.of(airplanesFile.getURI())),AirplaneEntity[].class);
+                Arrays.stream(airplaneEntities)
+                        .forEach(aircraftRepository::save);
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 
     public static Optional<AirplaneViewModel> findByName(List<AirplaneViewModel> avwm, String name){
       return avwm
