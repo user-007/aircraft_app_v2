@@ -7,8 +7,16 @@ import java.util.List;
 
 @Entity
 @Table(name = "user")
-public class UserEntity extends BaseEntity {
-    //user model, Todo: to be removed later
+public class UserEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    protected Long id;
+    public Long getId() {
+        return id;
+    }
+    public void setId(Long id) {
+        this.id = id;
+    }
     @Min(5)
     private String username;
     @Column(nullable = false)
