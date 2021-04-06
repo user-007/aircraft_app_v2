@@ -8,19 +8,28 @@
 <header th:replace="fragments/commons::header"></header>
 <br>
 <br>
-<h2>Регистрация на потребител</h2>
+<h2 style="color: white">Регистрация на потребител</h2>
 <div class="col-lg-4">
     <form action="" class="form-group">
         <p>Потребителско име</p>
-        <input type="text" class="form-control">
+        <input type="text"  class="form-control">
         <p>Парола</p>
-        <input type="password" class="form-control">
+        <input type="password"  class="form-control">
         <p>Повтаряне на паролата</p>
-        <input type="password" class="form-control">
+        <input type="password"  class="form-control">
         <p>Email</p><input type="email" class="form-control">
         <br>
         <button class="btn-primary">Регистрация</button>
     </form>
 </div>
+<style>
+   body{
+        background-image: url("images/register.jpg");
+       background-size: cover;
+    }
+   p{
+       color: white;
+   }
+</style>
 </body>
 </html>
