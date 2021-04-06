@@ -3,6 +3,7 @@ package aicrafts.aircraft_app.model.entities;
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.Min;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -34,7 +35,23 @@ public class UserEntity {
     private List<ShipEntity> ships;
     @OneToMany
     private List<WeaponEntity> weapons;
+    //Todo attention  - possible source of an error
+    @ManyToMany(fetch = FetchType.EAGER)
+    private List<UserRoleEntity> roles = new ArrayList<>();
 
+    public List<UserRoleEntity> getRoles() {
+        return roles;
+    }
+
+    public UserEntity setRoles(List<UserRoleEntity> roles) {
+        this.roles = roles;
+        return this;
+    }
+
+    public UserEntity addRole(UserRoleEntity roleEntity) {
+        this.roles.add(roleEntity);
+        return this;
+    }
     public List<TruckEntity> getTrucks() {
         return trucks;
     }

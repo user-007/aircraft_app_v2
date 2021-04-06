@@ -12,9 +12,6 @@ public class RegisterUserBindingModel {
     @Email
     private String email;
     @NotEmpty
-    @Size(min = 3)
-    private String fullname;
-    @NotEmpty
     @Size(min = 5, max = 20)
     private String password;
     @NotEmpty
@@ -35,15 +32,6 @@ public class RegisterUserBindingModel {
 
     public RegisterUserBindingModel setEmail(String email) {
         this.email = email;
-        return this;
-    }
-
-    public String getFullname() {
-        return fullname;
-    }
-
-    public RegisterUserBindingModel setFullname(String fullname) {
-        this.fullname = fullname;
         return this;
     }
 
